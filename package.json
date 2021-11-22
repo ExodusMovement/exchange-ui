@@ -1,0 +1,51 @@
+{
+  "name": "@exodus/linter-boilerplate",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Insert description here.",
+  "author": "Exodus Movement Inc",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExodusMovement/linter-boilerplate.git"
+  },
+  "homepage": "https://github.com/ExodusMovement/linter-boilerplate#readme",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/ExodusMovement/linter-boilerplate/issues"
+  },
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix"
+  },
+  "eslintConfig": {
+    "env": {
+      "node": true,
+      "browser": true,
+      "commonjs": true,
+      "es2021": true
+    },
+    "extends": [
+      "eslint:recommended",
+      "prettier"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
+  },
+  "prettier": "@exodus/prettier",
+  "devDependencies": {
+    "@exodus/prettier": "^0.1.5",
+    "eslint": "^7.23.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {}
+}
