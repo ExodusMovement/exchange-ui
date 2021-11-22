@@ -1,17 +1,16 @@
 {
-  "name": "@exodus/linter-boilerplate",
-  "private": true,
-  "version": "0.1.0",
-  "description": "Insert description here.",
+  "name": "@exodus/exchange-ui",
+  "version": "1.0.0",
+  "description": "React Components and Hooks for exchange form",
   "author": "Exodus Movement Inc",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ExodusMovement/linter-boilerplate.git"
+    "url": "git+https://github.com/ExodusMovement/exchange-ui.git"
   },
-  "homepage": "https://github.com/ExodusMovement/linter-boilerplate#readme",
+  "homepage": "https://github.com/ExodusMovement/exchange-ui#readme",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/ExodusMovement/linter-boilerplate/issues"
+    "url": "https://github.com/ExodusMovement/exchange-ui/issues"
   },
   "main": "src/index.js",
   "files": [
@@ -19,7 +18,8 @@
   ],
   "scripts": {
     "lint": "eslint .",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "watch": "./scripts/watch.js"
   },
   "eslintConfig": {
     "env": {
@@ -41,11 +41,26 @@
   },
   "prettier": "@exodus/prettier",
   "devDependencies": {
+    "@babel/preset-env": "7.16.4",
+    "@babel/preset-react": "7.16.0",
+    "@exodus/eslint-config": "1.0.1",
+    "@exodus/eslint-plugin-react-hooks": "2.2.0-exodus2",
     "@exodus/prettier": "^0.1.5",
+    "chalk": "4.1.2",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "7.27.1",
+    "fb-watchman": "2.0.1",
+    "fs-extra": "10.0.0",
     "prettier": "^2.2.1"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "lodash": "*",
+    "react": "^16.8.3"
+  },
+  "dependencies": {
+    "@exodus/assets": "8.0.56",
+    "@exodus/clean-input": "3.0.2"
+  }
 }

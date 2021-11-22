@@ -1,27 +1,36 @@
-# Linter Boilerplate
+## @exodus/exchange-ui
 
-This repository is meant to be used as a Github template repo for creating miscellaneous NPM packages or even to bootstrap a monorepo.
+Exodus exchange form hooks and components
 
-It comes with `eslint` and `prettier` preconfigured according to standard Exodus configurations.
+## Table of Contents
 
-## Instructions
+- [Installation](#installation)
+- [Development](#development)
+- [Hooks](#hooks)
 
-**1. Create a new repository.**
+## Installation
 
-![Screenshot_2021-04-07_17-36-28](https://user-images.githubusercontent.com/31221309/113951183-e8813500-97c7-11eb-8edf-c80c33b98ac7.png)
+```sh
+yarn add @exodus/ftx
+```
 
-**2. Select this repo as your template.**
+## Development
 
-![Screenshot_2021-04-07_17-40-50](https://user-images.githubusercontent.com/31221309/113951526-912f9480-97c8-11eb-9593-b1cdff2048ac.png)
+Linking a local copy of dependency on both wallets can be a bit tricky. That's mostly because the React Native packager doesn't support symlinks, causing the `npm link` command to fail.
 
-**3. Customize the `package.json` file for your purposes.**
+That's why this package ships a `yarn watch <target>` script that watches for file changes and maintains a copy of the package source into the wallet's `node_modules` folder.
 
-- Fix the package name from `@exodus/linter-boilerplate`. Generally, best practice is to mirror the new repo's name in the package name: `@exodus/<repo_name>`.
-- Remove `"private": true` if this is a package you intend to publish to NPM.
-- Add a description.
-- Update the `repository`, `bugs`, and `homepage` URLs to point to your new repository instead of to `ExodusMovement/linter-boilerplate`.
-- Specify the license if applicable.
+Usage:
 
-**4. Overwrite this README file with your own documentation.**
+```sh
+yarn watch <exodus-mobile-dir> # For Mobile wallet.
 
-**5. Start adding your own code!**
+yarn watch <exodus-desktop-dir>/src # For Desktop wallet. Should be linked inside 'src'
+```
+
+## Hooks
+
+### UseExchange 
+
+Hook creates exchange state, calculates amounts, returns callbacks.
+Accepts data from client-side state 
