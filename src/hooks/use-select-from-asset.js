@@ -8,8 +8,8 @@ const useSelectFromAsset = ({ toAssetName, handleSwap, handleChangePair }) =>
       return handleChangePair({
         fromAssetName: assetName,
         toAssetName,
-        fromAssetAmount: assets[assetName].currency.ZERO,
-        toAssetAmount: assets[toAssetName].currency.ZERO,
+        fromAmount: assets[assetName].currency.ZERO,
+        toAmount: assets[toAssetName].currency.ZERO,
       })
     },
     [handleChangePair, toAssetName, handleSwap]
