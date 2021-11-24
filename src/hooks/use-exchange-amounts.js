@@ -59,7 +59,7 @@ export const calculateAmounts = ({
       }
   }
 
-  if (btn !== '' && noDecimalAssetNames.includes(toAssetName)) {
+  if (!!btn && noDecimalAssetNames.includes(toAssetName)) {
     let nonDecimalAmount = exchangeConversion(fromAmount)
     if (btn === 'min') {
       nonDecimalAmount = nonDecimalAmount.add(assets[toAssetName].currency.defaultUnit(1))
