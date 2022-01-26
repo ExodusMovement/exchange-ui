@@ -967,13 +967,14 @@
     "@exodus/elrond-meta" "^0.0.6"
     "@exodus/neo3-meta" "~0.1.3"
 
-"@exodus/assets@8.0.56":
-  version "8.0.56"
-  resolved "https://registry.yarnpkg.com/@exodus/assets/-/assets-8.0.56.tgz#b1f088b5be2191e89541ff9b14e435ea3f82aa32"
-  integrity sha512-RQTXScB1VzfwbCqVJ5sWEhN4N9ODDfO3pZleJrPeqJRmcXJMwy5KYlXZaIqfutMs12yStyD6ZyZg37kAY2oqbQ==
+"@exodus/assets@~8.0.56":
+  version "8.0.59"
+  resolved "https://registry.yarnpkg.com/@exodus/assets/-/assets-8.0.59.tgz#2064a4d12499aca2bc703cbcc637b39f3540bd88"
+  integrity sha512-P/raR/M/77FuySC+lkCnVO39URygeTCt4rbU4tRGnW6wjYNo4x493mGo1QF3L4rNCc8rl5i5L3i7JA6fIljxMQ==
   dependencies:
     "@exodus/assets-base" "8.0.x"
     "@exodus/currency" "^1.1.0"
+    lodash "^4.17.11"
 
 "@exodus/clean-input@3.0.2":
   version "3.0.2"
@@ -2189,6 +2190,11 @@ lodash.truncate@^4.4.2:
   version "4.4.2"
   resolved "https://registry.yarnpkg.com/lodash.truncate/-/lodash.truncate-4.4.2.tgz#5a350da0b1113b837ecfffd5812cbe58d6eae193"
   integrity sha1-WjUNoLERO4N+z//VgSy+WNbq4ZM=
+
+lodash@^4.17.11:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 loose-envify@^1.4.0:
   version "1.4.0"

@@ -60,7 +60,7 @@
     "react": "^16.8.3"
   },
   "dependencies": {
-    "@exodus/assets": "8.0.56",
+    "@exodus/assets": "~8.0.56",
     "@exodus/clean-input": "3.0.2"
   }
 }
