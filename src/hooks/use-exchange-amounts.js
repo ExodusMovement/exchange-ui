@@ -1,6 +1,8 @@
 import assets from '@exodus/assets'
 import { useMemo } from 'react'
+import { isEqual } from 'lodash'
 import useFormattedExchangeAmounts from './use-formatted-exchange-amounts'
+import useMemoCompare from './use-memo-compare'
 
 export const calculateAmounts = ({
   maxAmount,
@@ -112,7 +114,7 @@ const useExchangeAmounts = ({
   noDecimalAssetNames,
   formatAssetAmount,
 }) => {
-  const amounts = useMemo(
+  const _amounts = useMemo(
     () =>
       calculateAmounts({
         maxAmount,
@@ -143,6 +145,8 @@ const useExchangeAmounts = ({
       noDecimalAssetNames,
     ]
   )
+
+  const amounts = useMemoCompare(_amounts, isEqual)
 
   const formattedAmounts = useFormattedExchangeAmounts({
     ...amounts,
